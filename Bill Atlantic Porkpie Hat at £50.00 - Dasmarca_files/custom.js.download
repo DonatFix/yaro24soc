@@ -1,0 +1,9 @@
+jQuery(document).ready(function($) {
+	$('.page-scroll').click(function(e){
+		e.preventDefault();
+		var id=$(this).attr('href');
+		var $id=$(id);
+		var pos=$id.offset().top;
+		$('body, html').animate({scrollTop:pos}, 1000);
+	})
+});
